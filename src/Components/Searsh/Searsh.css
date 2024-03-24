@@ -1,0 +1,40 @@
+.sercth
+{
+    width: 318px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    margin: 30px auto;
+}
+.sercth input
+{
+    width: 90%;
+    border: none;
+    outline: none;
+    font-size: 24px;
+}
+.sercth input::placeholder
+{
+    font-size: 24px;
+}
+.sercth img
+{
+    cursor: pointer;
+    border-left: 2px solid black;
+    padding-left: 5px;
+}
+.resolte
+{
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+.resolte span
+{
+    position: absolute;
+    top: 20px;
+    right: 80px;
+    font-size: 24px;
+    font-weight: 600;
+}
