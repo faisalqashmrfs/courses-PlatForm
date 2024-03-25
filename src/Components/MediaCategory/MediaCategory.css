@@ -128,7 +128,7 @@
     }
     .media-Section .Img-area img
     {
-        width: 100%;
+        width: 90%;
     }
 }
 @media(max-width:450px)
@@ -143,35 +143,38 @@
     }
     .media-Section .markiting
     {
-        width: 120px;
-        height: 120px;
+        width: 80px;
+        height: 80px;
+        border: 5px solid #A513FF;
     }
     .media-Section .markiting::before
     {
-        width: 60px;
-        height: 60px;
+        width: 40px;
+        height: 40px;
         top: 10px;
         left: 10px;
+        border: 5px solid #A513FF;
     }
     .media-Section .markiting::after
     {
-        width: 20px;
-        height: 20px;
-        top: 30px;
-        left: 30px;
+        width: 10px;
+        height: 10px;
+        top: 25px;
+        left: 25px;
+        border: 5px solid #A513FF;
     }
     .media-Section .ui
     {
-        width: 120px;
-        height: 120px;
+        width: 80px;
+        height: 80px;
     }
     .media-Section .design
     {
-        width: 120px;
-        height: 120px;
+        width: 80px;
+        height: 80px;
     }
     .media-Section .Img-area img
     {
-        width: 100%;
+        width: 81px;
     }
 }

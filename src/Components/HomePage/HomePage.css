@@ -108,10 +108,9 @@
 }
 .ForBlur
 {
-    filter: blur(10px);
+    filter: blur(5px);
     position: relative;
 }
-
 
 .loader-spinner
 {
@@ -122,6 +121,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.24);
 }
 .loader-spinnerOf
 {

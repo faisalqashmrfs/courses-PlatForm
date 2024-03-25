@@ -27,11 +27,16 @@
 .The-Navbar .side_2 h3
 {
     margin-right: 10px;
+    padding-bottom: 10px;
 }
 .The-Navbar .side_2 img , .The-Navbar .side_1 img
 {
     cursor: pointer;
 
+}
+.The-Navbar .side_1 .Secrsh
+{
+    margin-bottom: -3px;
 }
 
 @media (max-width:680px)

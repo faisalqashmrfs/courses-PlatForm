@@ -17,7 +17,7 @@ export default function NavBar({setleave }) {
             onClick={() => handelLeaving()}
             src={Leave} alt="Leave" />
             <Link to={'/searchPage'}>
-            <img src={Secrsh} alt="Secrsh" />
+            <img className='Secrsh' src={Secrsh} alt="Secrsh" />
             </Link>
         </div>
         <div className='side_2'> 

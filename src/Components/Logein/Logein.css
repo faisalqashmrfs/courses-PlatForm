@@ -48,6 +48,7 @@
     border: none;
     outline: none;
     border-bottom: 1px solid rgb(139, 138, 138);
+    padding-left: 25px;
 }
 .LogeIn .Main-box form input::placeholder
 {
@@ -57,6 +58,7 @@
     font-size: 12px;
     font-family: "Montserrat", sans-serif;
     padding: 0 10px;
+    font-family: "Tajawal", sans-serif;
 }
 .LogeIn .Main-box form button
 {
@@ -68,6 +70,19 @@
     border: none;
     border-radius: 2px;
     cursor: pointer;
+}
+
+.pass-Area
+{
+    position: relative;
+}
+.pass-Area img
+{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    cursor: pointer;
+    transform: translateY(-50%);
 }
 
 @media (max-width: 500px)
@@ -87,6 +102,6 @@
     }
     .LogeIn .Logo
     {
-        display: none;
+        left: 20px;
     }
 }

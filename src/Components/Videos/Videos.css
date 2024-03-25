@@ -23,19 +23,18 @@
 {
     padding: 5px;
 }
-.Video-Section .Card h3
+.Video-Section .Card .BodyCard .parag
 {
     text-align: center;
+    font-size: 18px;
+    font-weight: 500;
 }
 .Video-Section .Card .BodyCard .data
 {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     padding-top: 10px;
-}
-.Video-Section .Card .BodyCard .data p
-{
-    margin-right: 20px;
+    padding: 10px 15px 0 15px;
 }
 
 @media (max-width:600px)
