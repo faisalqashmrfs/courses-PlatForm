@@ -23,7 +23,6 @@
 }
 .media-Section div span
 {
-    letter-spacing: 3px;
     text-align: start;
 }
 .media-Section .markiting
@@ -143,25 +142,25 @@
     }
     .media-Section .markiting
     {
-        width: 80px;
-        height: 80px;
-        border: 5px solid #A513FF;
+        width: 60px;
+        height: 60px;
+        border: 4px solid #A513FF;
     }
     .media-Section .markiting::before
     {
-        width: 40px;
-        height: 40px;
-        top: 10px;
-        left: 10px;
-        border: 5px solid #A513FF;
+        width: 30px;
+        height: 30px;
+        top: 7px;
+        left: 7px;
+        border: 4px solid #A513FF;
     }
     .media-Section .markiting::after
     {
         width: 10px;
         height: 10px;
-        top: 25px;
-        left: 25px;
-        border: 5px solid #A513FF;
+        top: 18px;
+        left: 18px;
+        border: 3px solid #A513FF;
     }
     .media-Section .ui
     {

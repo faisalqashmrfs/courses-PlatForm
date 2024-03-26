@@ -21,7 +21,8 @@
 }
 .Video-Section .Card .BodyCard
 {
-    padding: 5px;
+    padding: 5px 10px;
+    font-size: 12px;
 }
 .Video-Section .Card .BodyCard .parag
 {
@@ -45,10 +46,19 @@
         padding: 30px 30px;
         gap: 30px;
     }
+    .Video-Section .Card iframe
+    {
+        height: 131px;
+    }
+    .Video-Section .Card .BodyCard
+    {
+        padding: 5px;
+        font-size: 12px;
+    }
     .Video-Section .Card
     {
         width: 167px;
-        height: 400px;
+        height: 300px;
     }
     .Video-Section .Card h3
     {

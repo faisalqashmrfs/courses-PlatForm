@@ -31,19 +31,21 @@ export default function HomePage() {
       </div>
       <main className={loding ? "ForBlur" : ""}>
         <NavBar setleave={setleave} />
-        <MediaCategory media={true}/>
+        <MediaCategory media={true} />
         <Videos />
         <VideoFooter />
       </main>
-      <div className={leave ? 'Leave' : 'Leaveoff'}>
-        <h3>هل تريد الخروج؟</h3>
-        <div>
-          <Link to={'/'}>
-            <button className='yes'>نعم</button>
-          </Link>
-          <button
-            onClick={() => handelLeaving()}
-            className='no'>لا</button>
+      <div className={leave ? 'LeaveFather' : 'LeaveFatherDis'}>
+        <div className={leave ? 'Leave' : 'Leaveoff'}>
+          <h3>هل تريد الخروج؟</h3>
+          <div>
+            <Link to={'/'}>
+              <button className='yes'>نعم</button>
+            </Link>
+            <button
+              onClick={() => handelLeaving()}
+              className='no'>لا</button>
+          </div>
         </div>
       </div>
 
