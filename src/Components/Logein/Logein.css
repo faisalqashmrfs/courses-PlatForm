@@ -48,13 +48,13 @@
     border: none;
     outline: none;
     border-bottom: 1px solid rgb(139, 138, 138);
-    padding-left: 25px;
+    padding-right: 25px;
 }
 .LogeIn .Main-box form input::placeholder
 {
     color: black;
     font-weight: 600;
-    text-align: end;
+    text-align: start;
     font-size: 12px;
     font-family: "Montserrat", sans-serif;
     padding: 0 10px;
@@ -71,7 +71,12 @@
     border-radius: 2px;
     cursor: pointer;
 }
-
+.LogeIn .Main-box form a
+{
+    display: flex;
+    justify-content: end;
+    text-decoration: none;
+}
 .pass-Area
 {
     position: relative;
@@ -79,7 +84,7 @@
 .pass-Area img
 {
     position: absolute;
-    left: 0;
+    right: 0;
     top: 50%;
     cursor: pointer;
     transform: translateY(-50%);
