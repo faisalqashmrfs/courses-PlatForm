@@ -8,6 +8,8 @@ import insta from './../../assets/Images/insta.png'
 import linkedin from './../../assets/Images/linkedin.png'
 import behance from './../../assets/Images/behance.png'
 import facebook from './../../assets/Images/facebook.png'
+import { Link } from 'react-router-dom';
+import ReactPlayer from 'react-player';
 
 export default function MediaCategory({ media }) {
 
@@ -141,7 +143,7 @@ export default function MediaCategory({ media }) {
                         </div>
                         <div className='Img-area'>
                             <div className={backColor}>
-                            <img className='MainPhots' src={marketingx} alt="" />
+                            <img className='MainPhots' src="" alt="" />
                             </div>
                         </div>
                     </div>}
@@ -168,7 +170,9 @@ export default function MediaCategory({ media }) {
                 <section className='Video-Section'>
                     {videoData.map((e) => (
                         <div className='Card' key={e.id}>
-                            <iframe width="560" height="315" src={e.path} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                            <div className='iframe'>
+                            <ReactPlayer  url={e.path} />
+                            </div>
                             <div className='BodyCard'>
                                 <p className='parag'>{e.title}</p>
                                 <div className='data'>
@@ -180,26 +184,52 @@ export default function MediaCategory({ media }) {
                     ))}
                 </section>
             )}
+            {/* {videoData && (
+                <section className='Video-Section'>
+                    {videoData.map((e) => (
+                        <div className='Card' key={e.id}>
+                            <iframe width="560" height="315" src={e.path} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                            <div className='BodyCard'>
+                                <p className='parag'>{e.title}</p>
+                                <div className='data'>
+                                    <p>{e.date}</p>
+                                    <p>الجلسة {e.number}</p>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </section>
+            )} */}
             <footer className='Video-Footer'>
                     <div className='contant'>
                         <p>
-                            2021 - 2023 focal X agency All Right Reserved
+                            2021 - 2024 focal X agency All Right Reserved
                         </p>
                         <div className='IconsFather'>
                             <div>
+                                <Link target='blank' to={'https://twitter.com/focal_x_agency'} style={{display:'flex' , justifyContent:'center' , alignItems:'center'}}>
                                 <img src={x} alt="" />
+                                </Link>
                             </div>
                             <div>
+                                <Link target='blank'  to={'https://www.instagram.com/focal.x.agency'} style={{display:'flex' , justifyContent:'center' , alignItems:'center'}}>
                                 <img src={insta} alt="" />
+                                </Link>
                             </div>
                             <div>
+                                <Link target='blank' to={'https://www.linkedin.com/company/focal-x-agency/'} style={{display:'flex' , justifyContent:'center' , alignItems:'center'}}>
                                 <img src={linkedin} alt="" />
+                                </Link>
                             </div>
                             <div>
+                                <Link target='blank'  to={'https://www.behance.net/focal-x-agency'} style={{display:'flex' , justifyContent:'center' , alignItems:'center'}}>
                                 <img src={behance} alt="" />
+                                </Link>
                             </div>
                             <div>
+                                <Link target='blank'  to={'https://www.facebook.com/focal.x.agency/'} style={{display:'flex' , justifyContent:'center' , alignItems:'center'}}>
                                 <img src={facebook} alt="" />
+                                </Link>
                             </div>
                         </div>
                     </div>
