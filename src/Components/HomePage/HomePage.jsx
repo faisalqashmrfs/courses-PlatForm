@@ -25,7 +25,7 @@ export default function HomePage() {
   }
 
   return (
-    <>
+    <section className='Main'>
       <div className={loding ? "loader-spinner" : "loader-spinnerOf"}>
         <HashLoader color="#ef8507" />
       </div>
@@ -33,7 +33,6 @@ export default function HomePage() {
         <NavBar setleave={setleave} />
         <MediaCategory media={true} />
         <Videos />
-        <VideoFooter />
       </main>
       <div className={leave ? 'LeaveFather' : 'LeaveFatherDis'}>
         <div className={leave ? 'Leave' : 'Leaveoff'}>
@@ -49,6 +48,6 @@ export default function HomePage() {
         </div>
       </div>
 
-    </>
+    </section>
   )
 }

@@ -3,15 +3,10 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center !important;
     align-items: center;
     gap: 60px;
     padding: 30px 80px;
-}
-.Video-Section .Card
-{
-    width: 190px;
-    height: 300px;
 }
 .Video-Section .Card iframe
 {
@@ -58,7 +53,6 @@
     .Video-Section .Card
     {
         width: 167px;
-        height: 300px;
     }
     .Video-Section .Card h3
     {

@@ -25,7 +25,7 @@ export default function Logein() {
 
     const handleLogin = async () => {
         try {
-          const response = await axios.post('http://127.0.0.1:8000/api/login',
+          const response = await axios.post('https://platform.focal-x.com/api/login',
             { email, password },
             {
               headers: {
@@ -34,7 +34,7 @@ export default function Logein() {
             }
           );
           localStorage.setItem('token', response.data.access_token);
-          localStorage.setItem('name', JSON.stringify(response.data.data.name));
+          localStorage.setItem('name', response.data.data.name);
           localStorage.setItem('data', JSON.stringify(response.data.data.relation));
         //   localStorage.setItem('relation', response.data.relation);
           if (response.status === 200) {
@@ -42,12 +42,12 @@ export default function Logein() {
             
             navigate('/HomePage');
           } else {
-            setError('خطأ في تسجيل الدخول. يرجى التحقق من بيانات الاعتماد.');
+            setError('');
             navigate('/');
           }
         } catch (error) {
           console.error('حدث خطأ غير متوقع:', error);
-          setError('حدث خطأ غير متوقع. يرجى المحاولة مرة أخرى.');
+          setError('.خطأ في تسجيل الدخول. يرجى التحقق من بيانات الاعتماد');
         }
       };
 
@@ -75,7 +75,7 @@ export default function Logein() {
                     <Link onClick={handleLogin}><button>Login</button></Link>
                 </form>
             </div>
-            <div className='error-messam'>{error}</div>
+            <div className={error ? 'error-messam':'error-messam-off'}>{error}</div>
             <div className='Footer'>
                 <VideoFooter />
             </div>

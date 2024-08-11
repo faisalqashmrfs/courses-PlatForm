@@ -1,10 +1,13 @@
 import { useState } from 'react'
 import './Searsh.css'
-import NavBar from '../Nanvbar/NavBar'
+// import NavBar from '../Nanvbar/NavBar'
+import FocalX from './../../assets/Images/FocalX.png'
+import Secrsh from './../../assets/Images/secrtch.png'
+import Leave from './../../assets/Images/Leave.png'
 import { Link } from 'react-router-dom'
-import sershe from './../../assets/Images/sershe.png'
-import MediaCategory from '../MediaCategory/MediaCategory'
+// import MediaCategory from '../MediaCategory/MediaCategory'
 import VideoFooter from '../VideoFooter/VideoFooter'
+import MediaCategoryForS from '../MediaCategoryForS/MediaCategoryForS'
 
 export default function Searsh() {
 
@@ -17,28 +20,25 @@ export default function Searsh() {
 
     return (
         <main>
-            <NavBar setleave={setleave} />
-            <div className={leave ? 'Leave' : 'Leaveoff'}>
-                <h3>هل تريد الخروج؟</h3>
-                <div>
-                    <Link to={'/'}>
-                        <button className='yes'>نعم</button>
-                    </Link>
-                    <button
-                        onClick={() => handelLeaving()}
-                        className='no'>لا</button>
-                </div>
-            </div>
-            <div className='sercth'>
-            <input type="text" placeholder='... اكتب عنوان أو رقم الجلسة'/>
-            <img src={sershe} alt="أيقونة بحث" />
-            </div>
-            <MediaCategory media={false}/>
-            <div className='resolte'>
-                <span>
-                    : النتائج
-                </span>
-            </div>
+            <nav className="The-Navbar">
+        <div className='side_1'> 
+            <Link to={'/HomePage'}>
+            <img 
+            src={Leave} alt="Leave" />
+            </Link>
+            <Link to={'/searchPage'}>
+            <img className='Secrsh' src={Secrsh} alt="Secrsh" />
+            </Link>
+        </div>
+        <div className='side_2'> 
+            <div><h3>{name}</h3></div>
+            <Link to={'/HomePage'}>
+            <img src={FocalX} alt="FocalX_Icone" />
+            </Link>
+        </div>
+    </nav>
+            <MediaCategoryForS media={false} />
+
             <VideoFooter />
         </main>
     )

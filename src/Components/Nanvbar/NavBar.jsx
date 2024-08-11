@@ -10,6 +10,9 @@ export default function NavBar({setleave }) {
   {
     setleave(true)
   }
+
+  const name = localStorage.getItem('name')
+
   return (
     <nav className="The-Navbar">
         <div className='side_1'> 
@@ -21,7 +24,7 @@ export default function NavBar({setleave }) {
             </Link>
         </div>
         <div className='side_2'> 
-            <div><h3>اسم المتدرب</h3></div>
+            <div><h3>{name}</h3></div>
             <Link to={'/HomePage'}>
             <img src={FocalX} alt="FocalX_Icone" />
             </Link>

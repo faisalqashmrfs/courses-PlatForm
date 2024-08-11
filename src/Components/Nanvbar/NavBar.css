@@ -59,3 +59,22 @@
         font-size: 16px;
     }
 }
+@media (max-width:400px)
+{
+    .The-Navbar
+    {
+        padding: 0 40px;
+    }
+    .The-Navbar .side_1
+    {
+        width: 60px;
+    }
+    .The-Navbar .side_2 img 
+    {
+        width: 32px;
+    }
+    .The-Navbar .side_2 h3
+    {
+        font-size: 12px;
+    }
+}

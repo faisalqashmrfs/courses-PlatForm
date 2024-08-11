@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './MediaCategory.css';
+import './MediaCategoryForS.css';
 import markiting from './../../assets/Images/markiting.png';
 import axios from 'axios';
 import marketingx from "./../../assets/Images/marketingx.png";
@@ -8,16 +8,15 @@ import insta from './../../assets/Images/insta.png'
 import linkedin from './../../assets/Images/linkedin.png'
 import behance from './../../assets/Images/behance.png'
 import facebook from './../../assets/Images/facebook.png'
+import sershe from './../../assets/Images/sershe.png'
 
-export default function MediaCategory({ media }) {
-
+export default function MediaCategoryForS({ media }) {
     const token = localStorage.getItem('token');
-
     const [datav, setDatav] = useState([]);
     const [datas, setDatas] = useState([]);
     const [data10, setData10] = useState(null);
     const [videoData, setVideoData] = useState(null); // State for video data
-
+    const [filteredData, setFilteredData] = useState(null); // State for filtered video data
     const specialV = localStorage.getItem('data');
 
     useEffect(() => {
@@ -29,8 +28,6 @@ export default function MediaCategory({ media }) {
         })
             .then(response => {
                 setDatav(response.data.data);
-                
-                
             })
             .catch(error => {
                 console.error('Error fetching data: ', error);
@@ -48,7 +45,6 @@ export default function MediaCategory({ media }) {
         })
             .then(response => {
                 setDatas(response.data.data);
-                console.log(response.data.data);
             })
             .catch(error => {
                 console.error('Error fetching data: ', error);
@@ -85,7 +81,6 @@ export default function MediaCategory({ media }) {
         }
     }, [datav, datas, specialV]);
 
-    // Function to fetch video data based on selected version and specialization IDs
     const fetchVideoData = (versionId, specializationId) => {
         axios.get(`https://platform.focal-x.com/api/video?version=${versionId}&specialization=${specializationId}`, {
             headers: {
@@ -95,6 +90,7 @@ export default function MediaCategory({ media }) {
         })
             .then(response => {
                 setVideoData(response.data.data); // Store the fetched video data
+                setFilteredData(response.data.data); // Initialize the filtered data with the full set of videos
                 setmedias(datas.find(s => s.id == specializationId));
             })
             .catch(error => {
@@ -115,13 +111,35 @@ export default function MediaCategory({ media }) {
 
     const [HandelColor,setHandelColor] = useState()
 
-   function HandelColor12 (index)
-   {
-    setHandelColor(index)
-   }
+    function HandelColor12 (index) {
+        setHandelColor(index)
+    }
+
+    function Serch(query) {
+        if (query === '') {
+            // If the search query is empty, reset to the original video data
+            setFilteredData(videoData);
+        } else {
+            const lowercasedQuery = query.toLowerCase();
+            const filtered = videoData.filter(video => 
+                video.number.toString().includes(lowercasedQuery) || 
+                video.title.toLowerCase().includes(lowercasedQuery)
+            );
+            setFilteredData(filtered);
+        }
+    }
 
     return (
         <>
+        <div className='sercth'>
+                <input onChange={(e) => Serch(e.target.value)} type="text" placeholder='... اكتب عنوان أو رقم الجلسة' />
+                <img src={sershe} alt="أيقونة بحث" />
+            </div>
+            <div className='resolte'>
+                <span>
+                    : النتائج
+                </span>
+            </div>
             <section className='Hero-section'>
                 <div className='TopBar'>
                     {media && medias && <div className='media-Section'>
@@ -131,7 +149,6 @@ export default function MediaCategory({ media }) {
                         <div className='Img-area'>
                             <div className={backColor}>
                                 <img className='MainPhots' src={medias.image} alt="" />
-                                
                             </div>
                         </div>
                     </div>}
@@ -164,9 +181,9 @@ export default function MediaCategory({ media }) {
                 </div>
                 
             </section>
-            {videoData && (
+            {filteredData && (
                 <section className='Video-Section'>
-                    {videoData.map((e) => (
+                    {filteredData.map((e) => (
                         <div className='Card' key={e.id}>
                             <iframe width="560" height="315" src={e.path} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                             <div className='BodyCard'>
@@ -180,7 +197,7 @@ export default function MediaCategory({ media }) {
                     ))}
                 </section>
             )}
-            <footer className='Video-Footer'>
+            {/* <footer className='Video-Footer'>
                     <div className='contant'>
                         <p>
                             2021 - 2023 focal X agency All Right Reserved
@@ -203,7 +220,7 @@ export default function MediaCategory({ media }) {
                             </div>
                         </div>
                     </div>
-                </footer>
+                </footer> */}
         </>
     );
 }

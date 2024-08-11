@@ -1,6 +1,12 @@
+.Main
+{
+    position: relative;
+}
+
 .TopBar
 {
     width: 100%;
+    position: relative;
 }
 .TopBar nav
 {
@@ -14,63 +20,26 @@
     width: 100%;
     overflow-x: hidden;
 }
-.TopBar nav .indexClass0
+.TopBar .navigationstatic
 {
-    width: 180vw;
-    display: flex;
-    justify-content: space-between;
-    font-size: 20px;
-    transition: .6s;
-    transform: translateX(-0vw);
+    width: 100%;
 }
-.TopBar nav .indexClass1
+.TopBar .MainPhots
 {
-    width: 180vw;
-    display: flex;
-    justify-content: space-between;
-    font-size: 20px;
-    transition: .6s;
-    transform: translateX(-30vw);
+    width: 425px !important;
 }
-.TopBar nav .indexClass2
+.TopBar .indexClass
 {
-    width: 180vw;
     display: flex;
-    justify-content: space-between;
-    font-size: 20px;
-    transition: .6s;
-    transform: translateX(-60vw);
-}
-.TopBar nav .indexClass3
-{
-    width: 180vw;
-    display: flex;
-    justify-content: space-between;
-    font-size: 20px;
-    transition: .6s;
-    transform: translateX(-90vw);
-}
-.TopBar nav .indexClass4
-{
-    width: 180vw;
-    display: flex;
-    justify-content: space-between;
-    font-size: 20px;
-    transition: .6s;
-    transform: translateX(-120vw);
-}
-.TopBar nav .indexClass5
-{
-    width: 180vw;
-    display: flex;
-    justify-content: space-between;
-    font-size: 20px;
-    transition: .6s;
-    transform: translateX(-150vw);
+    justify-content: center;
+    width: 100%;
+    gap: 10px 40px;
+    flex-wrap: wrap;
+    padding: 0 30px;
 }
 .TopBar nav li
 {
-    width: 30vw;
+    width: max-content;
     text-align: center;
     position: relative;
     color: #282828;
@@ -80,7 +49,10 @@
 .TopBar nav li span
 {
     cursor: pointer;
+    color: black;
+    font-weight: 500;
 }
+
 .TopBar .FQ-disapleButton
 {
     z-index: -1;
@@ -208,80 +180,22 @@
 {
     cursor: pointer;
 }
-@media (max-width:1250px)
+/* @media (max-width:1250px)
 {
-    .TopBar nav .indexClass0
-    {
-        width: 240vw;
-    }
-    .TopBar nav .indexClass1
-    {
-        width: 240vw;
-        transform: translateX(-40vw);
-    }
-    .TopBar nav .indexClass2
-    {
-        width: 240vw;
-        transform: translateX(-80vw);
-    }
-    .TopBar nav .indexClass3
-    {
-        width: 240vw;
-        transform: translateX(-120vw);
-    }
-    .TopBar nav .indexClass4
-    {
-        width: 240vw;
-        transform: translateX(-160vw);
-    }
-    .TopBar nav .indexClass5
-    {
-        width: 240vw;
-        transform: translateX(-200vw);
-    }
     .TopBar nav li
     {
-        width: 40vw;
         height: 35px;
     }
 }
 @media (max-width:920px)
 {
-    .TopBar nav .indexClass0
-    {
-        width: 480vw;
-    }
-    .TopBar nav .indexClass1
-    {
-        width: 480vw;
-        transform: translateX(-80vw);
-    }
-    .TopBar nav .indexClass2
-    {
-        width: 480vw;
-        transform: translateX(-160vw);
-    }
-    .TopBar nav .indexClass3
-    {
-        width: 480vw;
-        transform: translateX(-240vw);
-    }
-    .TopBar nav .indexClass4
-    {
-        width: 480vw;
-        transform: translateX(-320vw);
-    }
-    .TopBar nav .indexClass5
-    {
-        width: 480vw;
-        transform: translateX(-400vw);
-    }
+    
     .TopBar nav li
     {
         width: 80vw;
         font-size: 16px;
     }
-}
+} */
 
 @media (max-width:700px)
 {
@@ -294,38 +208,10 @@
         width: 350px;
         margin: 0 auto;
     }
-    .TopBar nav .indexClass0
-    {
-        width: 2100px;
-    }
-    .TopBar nav .indexClass1
-    {
-        width: 2100px;
-        transform: translateX(-350px);
-    }
-    .TopBar nav .indexClass2
-    {
-        width: 2100px;
-        transform: translateX(-700px);
-    }
-    .TopBar nav .indexClass3
-    {
-        width: 2100px;
-        transform: translateX(-1050px);
-    }
-    .TopBar nav .indexClass4
-    {
-        width: 2100px;
-        transform: translateX(-1400px);
-    }
-    .TopBar nav .indexClass5
-    {
-        width: 2100px;
-        transform: translateX(-1750px);
-    }
+    
     .TopBar nav li
     {
-        width: 350px;
+        /* width: 350px; */
         text-align: center;
     }
     .Leave
@@ -349,6 +235,10 @@
         border-radius: 4px;
         cursor: pointer;
     }
+    .TopBar .MainPhots
+{
+    width: 325px !important;
+}
 }
 @media (max-width:450px)
 {
@@ -361,38 +251,14 @@
         width: 310px;
         margin: 0 auto;
     }
-    .TopBar nav .indexClass0
-    {
-        width: 1860px;
-    }
-    .TopBar nav .indexClass1
-    {
-        width: 1860px;
-        transform: translateX(-310px);
-    }
-    .TopBar nav .indexClass2
-    {
-        width: 1860px;
-        transform: translateX(-620px);
-    }
-    .TopBar nav .indexClass3
-    {
-        width: 1860px;
-        transform: translateX(-930px);
-    }
-    .TopBar nav .indexClass4
-    {
-        width: 1860px;
-        transform: translateX(-1240px);
-    }
-    .TopBar nav .indexClass5
-    {
-        width: 1860px;
-        transform: translateX(-1560px);
-    }
+    
     .TopBar nav li
     {
-        width: 310px;
+        /* width: 310px; */
         text-align: center;
+    }
+    .TopBar .MainPhots
+    {
+        width: 250px !important;
     }
 }
