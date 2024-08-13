@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import './MediaCategory.css';
 import markiting from './../../assets/Images/markiting.png';
 import axios from 'axios';
-import marketingx from "./../../assets/Images/marketingx.png";
 import x from './../../assets/Images/x.png'
 import insta from './../../assets/Images/insta.png'
 import linkedin from './../../assets/Images/linkedin.png'

@@ -47,7 +47,7 @@ export default function Logein() {
           }
         } catch (error) {
           console.error('حدث خطأ غير متوقع:', error);
-          setError('.خطأ في تسجيل الدخول. يرجى التحقق من بيانات الاعتماد');
+          setError('The email or password you entered is incorrect. Please try again');
         }
       };
 

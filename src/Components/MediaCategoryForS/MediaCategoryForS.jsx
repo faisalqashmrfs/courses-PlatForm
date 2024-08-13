@@ -9,6 +9,7 @@ import linkedin from './../../assets/Images/linkedin.png'
 import behance from './../../assets/Images/behance.png'
 import facebook from './../../assets/Images/facebook.png'
 import sershe from './../../assets/Images/sershe.png'
+import ReactPlayer from 'react-player';
 
 export default function MediaCategoryForS({ media }) {
     const token = localStorage.getItem('token');
@@ -185,7 +186,9 @@ export default function MediaCategoryForS({ media }) {
                 <section className='Video-Section'>
                     {filteredData.map((e) => (
                         <div className='Card' key={e.id}>
-                            <iframe width="560" height="315" src={e.path} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                            <div className='iframe'>
+                            <ReactPlayer  url={e.path} />
+                            </div>
                             <div className='BodyCard'>
                                 <p className='parag'>{e.title}</p>
                                 <div className='data'>
