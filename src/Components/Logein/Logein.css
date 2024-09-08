@@ -13,6 +13,12 @@
     top: 30px;
     left: 80px;
 }
+.LogeIn .Logo2
+{
+    position: absolute;
+    top: 30px;
+    right: 80px;
+}
 .LogeIn .Footer
 {
     position: absolute;
@@ -132,5 +138,9 @@
     .LogeIn .Logo
     {
         left: 20px;
+    }
+    .LogeIn .Logo2
+    {
+        right: 20px;
     }
 }

@@ -5,6 +5,11 @@
     height: 350px;
     background-color: #F4F4F4;
 }
+.sercth
+{
+  display: flex;
+  flex-direction: row-reverse;
+}
 .media-Section div
 {
     width: 50%;

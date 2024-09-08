@@ -133,7 +133,7 @@ export default function MediaCategoryForS({ media }) {
     return (
         <>
         <div className='sercth'>
-                <input onChange={(e) => Serch(e.target.value)} type="text" placeholder='... اكتب عنوان أو رقم الجلسة' />
+                <input style={{ direction: "rtl", textAlign:'right'}} onChange={(e) => Serch(e.target.value)} type="text" placeholder=' اكتب عنوان أو رقم الجلسة ..'  />
                 <img src={sershe} alt="أيقونة بحث" />
             </div>
             <div className='resolte'>

@@ -55,6 +55,7 @@ export default function Logein() {
     return (
         <section className='LogeIn'>
             <img className='Logo' src={Focal} alt="Focal photo" />
+            <img className='Logo2' src={Focal} alt="Focal photo" />
             <div className='Main-box'>
             <h2>Welcome To Your Future </h2>
             <h4>learn.. and have fun</h4>

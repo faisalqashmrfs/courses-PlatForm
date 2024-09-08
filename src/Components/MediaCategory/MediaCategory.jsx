@@ -138,7 +138,7 @@ export default function MediaCategory({ media }) {
                     </div>}
                     {media && !medias && <div className='media-Section'>
                         <div>
-                            <h2>Chose S</h2>
+                            <h2></h2>
                         </div>
                         <div className='Img-area'>
                             <div className={backColor}>
